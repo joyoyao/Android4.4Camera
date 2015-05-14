@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2012 Thunder Software Technology Co.,Ltd.
+ All Rights Reserved.
+ Thundersoft Confidential and Proprietary.
+ Developed by Thundersoft Engineering team.
+-->
+<com.android.camera.ui.InLineStoragePath
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SettingRow"
+    modePicker="1"><!-- "android:picker" the value is ModePicker.MODE_VIDEO -->
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/SettingItemTitleTag" />
+
+    <TextView
+        android:id="@+id/tv_storage_path"
+        style="@style/SettingStorageTagText" />
+
+</com.android.camera.ui.InLineStoragePath>

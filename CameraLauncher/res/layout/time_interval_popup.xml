@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (c) 2011, The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<com.android.camera.ui.TimeIntervalPopup xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SettingPopupOptionsWindow"
+    android:layout_width="@dimen/big_setting_popup_window_width"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="@dimen/big_setting_popup_window_content_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_full_holo_light"
+        android:orientation="vertical"
+        android:weightSum="102" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/popup_title_frame_min_height"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/PopupOptionsTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/popup_title_frame_min_height" />
+
+            <Switch
+                android:id="@+id/time_lapse_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0"
+                android:switchTextAppearance="@*android:style/TextAppearance.Holo.Light.Widget.Switch"
+                android:thumb="@*android:drawable/switch_inner_holo_light"
+                android:track="@*android:drawable/switch_track_holo_light"/>
+        </LinearLayout>
+
+        <View style="@style/PopupTitleThinSeparator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/set_time_interval_help_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="16dip"
+                android:text="@string/set_time_interval_help"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="100" >
+
+            <include layout="@layout/time_interval_picker" />
+        </LinearLayout>
+
+        <View style="@style/PopupTitleThinSeparator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="?android:attr/dividerHorizontal"
+            android:dividerPadding="0dip"
+            android:orientation="vertical"
+            android:showDividers="beginning" >
+
+            <Button
+                android:id="@+id/time_lapse_interval_set_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/cancel_btn_selector"
+                android:text="@string/time_lapse_interval_set"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.android.camera.ui.TimeIntervalPopup>

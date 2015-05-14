@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2010, The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<com.android.camera.ui.PreviewItemOptionsView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/big_setting_popup_window_width"
+    android:layout_height="wrap_content"
+    android:id="@+id/view_group_item_options"
+    style="@style/SettingPopupOptionsWindow">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/big_setting_popup_window_width"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:background="@drawable/shape_corner_blue">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/big_setting_popup_window_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corner">
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/shape_corner_white"
+                android:layout_width="@dimen/big_setting_popup_window_content_width"
+                android:layout_height="wrap_content"
+                android:weightSum="102">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSettingItemTitleClicked"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/popup_title_frame_min_height">
+                    <TextView
+                        android:id="@+id/item_title"
+                        style="@style/PopupOptionsTitleText" />
+                </LinearLayout>
+                <View style="@style/PopupTitleThinSeparator" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ListView
+                        android:id="@+id/item_options_list"
+                        style="@style/PopupItemList"
+                         />
+                    <TextView
+                        android:id="@+id/item_options_list_empty"
+                        style="@style/SettingStorageText"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="@dimen/setting_item_text_size"
+                        android:text="@string/notice_storage_empty" />
+                </LinearLayout>
+                <View style="@style/PopupTitleThinSeparator" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp">
+                    <Button
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/button_cancel"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:clickable="true"
+                        android:background="@drawable/cancel_btn_selector" />
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</com.android.camera.ui.PreviewItemOptionsView>

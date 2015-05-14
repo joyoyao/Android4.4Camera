@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.camera.ui.VideoControlsTop xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/control_panel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:visibility="visible">
+<com.android.camera.ui.RotateImageView android:id="@+id/btn_switch"
+            android:layout_height="90px"
+            android:layout_width="90px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="onSwitchButtonClicked"
+            android:src="@drawable/btn_video_switch"
+
+             />
+    <TextView android:id="@+id/recording_time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/video_recording_time_background"
+            android:visibility="gone"/>
+    <TextView android:id="@+id/time_lapse_label"
+            android:text="@string/time_lapse_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="gone" />
+    <com.android.camera.ui.RotateImageView android:id="@+id/btn_flash"
+            android:layout_height="90px"
+            android:layout_width="90px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:onClick="onFlashButtonClicked"
+
+            android:src="@drawable/ic_flash_off_uui" />
+</com.android.camera.ui.VideoControlsTop>

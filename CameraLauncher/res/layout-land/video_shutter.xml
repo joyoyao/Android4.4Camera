@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_shutter_layout"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.android.camera.ShutterButton
+        android:id="@+id/shutter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:clickable="true"
+        android:contentDescription="@string/accessibility_shutter_button"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/btn_new_shutter_video_land" />
+    <ImageView
+        android:id="@+id/btn_video_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:layout_below="@id/shutter_button"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:onClick="onStopClicked"
+        android:src="@drawable/btn_new_video_stop"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/btn_video_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/btn_video_stop"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:onClick="onPauseClicked"
+        android:src="@drawable/btn_new_video_pause"
+        android:visibility="gone" />
+</RelativeLayout>

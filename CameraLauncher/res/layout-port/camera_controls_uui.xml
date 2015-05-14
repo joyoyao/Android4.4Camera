@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.camera.ui.CameraControlsTop xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/control_panel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:visibility="visible">
+    <com.android.camera.ui.RotateImageView android:id="@+id/btn_switch"
+            android:layout_height="90px"
+            android:layout_width="90px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:onClick="onSwitchButtonClicked"
+            android:src="@drawable/btn_camera_switch" />
+    <com.android.camera.ui.RotateImageView android:id="@+id/btn_hdr"
+            android:layout_height="90px"
+            android:layout_width="90px"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:onClick="onHdrButtonClicked"
+            android:src="@drawable/btn_hdr_off_to_on" />
+    <com.android.camera.ui.RotateImageView android:id="@+id/btn_flash"
+            android:layout_height="90px"
+            android:layout_width="90px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="onFlashButtonClicked"
+            android:src="@drawable/ic_flash_off_uui" />
+</com.android.camera.ui.CameraControlsTop>
